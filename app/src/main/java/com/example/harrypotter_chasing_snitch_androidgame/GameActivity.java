@@ -67,7 +67,6 @@ public class GameActivity extends AppCompatActivity {
         initButtons();
         // start the timer
         actionStartTimer();
-
     }
 
     private void actionStartTimer() {
@@ -109,8 +108,7 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void randomDirection() {
-        //TODO if random direction cant move to there
-        // random again
+        //TODO to check if random direction cant move to there random again
         characterMovement(harryPotter, (int)(Math.random()*4));
     }
 
@@ -143,36 +141,23 @@ public class GameActivity extends AppCompatActivity {
             default:
                 break;
         }
-
     }
 
     private void updateUI() {
         isCatchesHim();
-
         game_LBL_score.setText("" + manager.getScore());
-
         for (int i = 0; i < game_hearts.length; i++)
             game_hearts[i].setVisibility(manager.getLive() > i ? View.VISIBLE : View.INVISIBLE);
     }
 
     private void isCatchesHim() {
         if (snitch.getRow() == harryPotter.getRow() && snitch.getCol() == harryPotter.getCol()) {
-            doVibrate();
+            new Services(this).doVibrate();
             snitch.setDirection(STAR_DIRECTION);
             manager.reduceLives();
-            manager.initialScore();
+            //TODO check if need to initial score every game of after all life reduces
+            //manager.initialScore();
             updateBoardUI();
-        }
-    }
-
-    public void doVibrate(){
-        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        // Vibrate for 500 milliseconds
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            v.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE));
-        } else {
-            //deprecated in API 26
-            v.vibrate(500);
         }
     }
 
@@ -207,7 +192,6 @@ public class GameActivity extends AppCompatActivity {
     private void stopTimer() {
         timer.cancel();
     }
-
 
     private void initButtons() {
         game_BTN_arrowUp.setOnClickListener(e -> snitch.setDirection(UP));
