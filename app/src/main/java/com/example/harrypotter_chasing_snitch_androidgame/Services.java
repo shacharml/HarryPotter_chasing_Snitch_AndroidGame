@@ -12,8 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Services {
     AppCompatActivity appCompatActivity;
 
-    public Services() {
-    }
+    public Services() {}
     public Services(AppCompatActivity activity) {
         this.appCompatActivity = activity;
     }

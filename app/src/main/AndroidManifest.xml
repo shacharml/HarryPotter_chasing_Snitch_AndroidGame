@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HarryPotter_chasing_Snitch_AndroidGame">
         <activity
-            android:name=".GameActivity"
+            android:name="com.example.harrypotter_chasing_snitch_androidgame.activities.GameActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:label="@string/app_name"

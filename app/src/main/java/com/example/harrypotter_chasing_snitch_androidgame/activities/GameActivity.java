@@ -1,15 +1,14 @@
-package com.example.harrypotter_chasing_snitch_androidgame;
+package com.example.harrypotter_chasing_snitch_androidgame.activities;
 
-import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
 
-import com.google.android.material.snackbar.Snackbar;
+import com.example.harrypotter_chasing_snitch_androidgame.GameManager;
+import com.example.harrypotter_chasing_snitch_androidgame.PlayerCharacter;
+import com.example.harrypotter_chasing_snitch_androidgame.R;
+import com.example.harrypotter_chasing_snitch_androidgame.Services;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.VibrationEffect;
-import android.os.Vibrator;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -58,7 +57,7 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_game);
         //init the game players and manager
         initGame();
         //find all views
