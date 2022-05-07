@@ -1,17 +1,12 @@
-package com.example.harrypotter_chasing_snitch_androidgame;
+package com.example.harrypotter_chasing_snitch_androidgame.logic;
 
 public class PlayerCharacter {
-
     private int col;
     private int row;
     private int direction;
     private int icon; //src of image icon
 
     //----- Constructors ------
-
-    public PlayerCharacter() {
-    }
-
     public PlayerCharacter( int row,int col, int direction, int icon) {
         this.col = col;
         this.row = row;
@@ -19,8 +14,7 @@ public class PlayerCharacter {
         this.icon = icon;
     }
 
-
-    //----- Getters & Setters ------
+   //----- Getters & Setters ------
     public int getCol() {
         return col;
     }

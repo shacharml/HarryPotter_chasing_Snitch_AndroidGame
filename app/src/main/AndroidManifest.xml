@@ -3,24 +3,49 @@
     package="com.example.harrypotter_chasing_snitch_androidgame">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
     <application
+        android:name=".activities.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.HarryPotter_chasing_Snitch_AndroidGame">
+        android:supportsRtl="false"
+        android:theme="@style/Theme.HarryPotter_chasing_Snitch_AndroidGame.NoActionBar">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAv1vv-8HydK0IPCTaxh5ih9KTuUQtvw-s" />
+
+
         <activity
-            android:name="com.example.harrypotter_chasing_snitch_androidgame.activities.GameActivity"
+            android:name="com.example.harrypotter_chasing_snitch_androidgame.activities.MenuActivity"
             android:exported="true"
-            android:screenOrientation="portrait"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.HarryPotter_chasing_Snitch_AndroidGame.NoActionBar">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activities.GameActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activities.TopTenActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.harrypotter_chasing_snitch_androidgame.activities.GameActivity"
+    tools:context="com.example.harrypotter_chasing_snitch_androidgame.activities.MenuActivity"
     android:background="@drawable/quidditch_background"
     >
 
@@ -18,10 +18,10 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="50dp"
-            android:layout_marginEnd="10dp"
-            android:background="#65A8EFAC"
+            android:layout_marginEnd="20dp"
+            android:background="#3EA8EFAC"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -29,7 +29,6 @@
                 android:id="@+id/game_LBL_score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="monospace"
                 android:gravity="center"
                 android:text="Harry Potter chasing Snitch"
                 android:textColor="#1E570E"
@@ -37,7 +36,6 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/main_IMG_img1"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_margin="3dp"
@@ -50,8 +48,39 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="40dp"
             android:orientation="vertical">
+
+            <!--            Enter name and move next    -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/menu_EDT_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:autofillHints="name"
+                    android:background="#3EA8EFAC"
+                    android:hint="Enter Your name"
+                    android:textColor="@color/white"
+                    android:textColorHint="#C8FFFFFF" />
+
+                <ImageButton
+                    android:id="@+id/menu_BTN_next"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/ic_next" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
             <!-- Play botton   -->
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
@@ -61,7 +90,7 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/main_BTN_play"
+                    android:id="@+id/menu_BTN_play"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -69,6 +98,7 @@
                     android:text="Play"
                     android:textColor="@color/white"
                     android:textSize="30sp"
+                    android:visibility="invisible"
                     app:cornerRadius="15dp"
                     app:icon="@drawable/ic_play"
                     app:iconPadding="20dp"
@@ -79,7 +109,38 @@
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <!-- third line in the game   -->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Play with Sensors button   -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/menu_BTN_playSensor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#2FA8EFAC"
+                    android:text="Sensor Play"
+                    android:textColor="@color/white"
+                    android:textSize="27sp"
+                    android:visibility="invisible"
+                    app:cornerRadius="15dp"
+                    app:icon="@drawable/ic_sensor"
+                    app:iconPadding="20dp"
+                    app:iconSize="60dp"
+                    app:iconTint="@null" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <!-- Top Ten button   -->
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -94,8 +155,9 @@
                 android:layout_marginEnd="2dp"
                 android:orientation="vertical">
 
+
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/main_BTN_top_ten"
+                    android:id="@+id/menu_BTN_top_ten"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -103,10 +165,11 @@
                     android:text="Top 10"
                     android:textColor="@color/white"
                     android:textSize="30sp"
+                    android:visibility="invisible"
                     app:cornerRadius="15dp"
                     app:icon="@drawable/ic_top_ten"
                     app:iconPadding="20dp"
-                    app:iconSize="60dp"
+                    app:iconSize="65dp"
                     app:iconTint="@null" />
 
 

@@ -5,7 +5,14 @@
       <map>
         <entry key="..\:/Users/shach/AndroidStudioProjects/Class/HarryPotter_chasing_Snitch_AndroidGame/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1645" />
         <entry key="..\:/Users/shach/AndroidStudioProjects/Class/HarryPotter_chasing_Snitch_AndroidGame/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1645" />
+        <entry key="..\:/Users/shach/AndroidStudioProjects/Class/HarryPotter_chasing_Snitch_AndroidGame/app/src/main/res/drawable/lines.xml" value="0.134" />
+        <entry key="..\:/Users/shach/AndroidStudioProjects/Class/HarryPotter_chasing_Snitch_AndroidGame/app/src/main/res/layout/activity_game.xml" value="0.184375" />
         <entry key="..\:/Users/shach/AndroidStudioProjects/Class/HarryPotter_chasing_Snitch_AndroidGame/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/shach/AndroidStudioProjects/Class/HarryPotter_chasing_Snitch_AndroidGame/app/src/main/res/layout/activity_menu.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/shach/AndroidStudioProjects/Class/HarryPotter_chasing_Snitch_AndroidGame/app/src/main/res/layout/activity_top_ten.xml" value="0.1" />
+        <entry key="..\:/Users/shach/AndroidStudioProjects/Class/HarryPotter_chasing_Snitch_AndroidGame/app/src/main/res/layout/fragment_list.xml" value="0.15128205128205127" />
+        <entry key="..\:/Users/shach/AndroidStudioProjects/Class/HarryPotter_chasing_Snitch_AndroidGame/app/src/main/res/layout/fragment_map.xml" value="0.184375" />
+        <entry key="..\:/Users/shach/AndroidStudioProjects/Class/HarryPotter_chasing_Snitch_AndroidGame/app/src/main/res/layout/fragment_top_ten.xml" value="0.22" />
         <entry key="..\:/Users/shach/AndroidStudioProjects/Class/HarryPotter_chasing_Snitch_AndroidGame/app/src/main/res/layout/shape.xml" value="0.184375" />
       </map>
     </option>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.harrypotter_chasing_snitch_androidgame.activities.GameActivity"
+    android:background="@drawable/quidditch_background"
+    >
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- back & top ten-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="6dp"
+            android:orientation="vertical">
+            <!--            Back button -> move to the menu again-->
+            <ImageButton
+                android:id="@+id/top_ten_BTN_back"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_arrow_left"
+                android:backgroundTint="#DD1C3C05" />
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_top_ten" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <!--        The list of the top ten leaderboard frame-->
+        <FrameLayout
+            android:id="@+id/top_ten_LAY_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:layout_weight="4"
+            android:background="#41AFFDB2" />
+
+        <!--The google Map Api frame-->
+        <FrameLayout
+            android:id="@+id/top_ten_LAY_map"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:layout_weight="4"
+            android:background="#41AFFDB2" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center">
+            <!--Play again button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/menu_BTN_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#2FA8EFAC"
+                android:text="Play again"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:cornerRadius="15dp"
+                app:icon="@drawable/ic_play"
+                app:iconPadding="20dp"
+                app:iconSize="30dp"
+                app:iconTint="@null" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>
